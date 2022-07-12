@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherSearch(props) {
   return (
@@ -20,10 +21,7 @@ export default function WeatherSearch(props) {
               className="float-left"
             />
             <div className="float-left">
-              <span className="temperature">
-                {Math.round(props.data.temperature)}
-              </span>
-              <span className="unit">°C</span>
+              <WeatherTemperature celsius={props.data.temperature} />
             </div>
           </div>
         </div>
